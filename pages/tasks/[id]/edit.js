@@ -1,10 +1,14 @@
-// import Link rom 'next/link'
+import Head from 'next/head'
+import Layout from '../../../components/Layout/Layout'
 
 function Edit () {
   return (
-    <main>
-      <div>Task</div>
-    </main>
+    <Layout>
+      <Head>
+        <title> Tanabata Task Edit </title>
+      </Head>
+      <div>Task Edit</div>
+    </Layout>
   )
 }
 
