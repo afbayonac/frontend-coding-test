@@ -1,16 +1,35 @@
 import Link from 'next/link'
 import Layout from '../components/Layout/Layout'
 
-function Home () {
+// TODO: add message when profiles are empty
+function Home ({ profiles = [] }) {
+  console.log(profiles)
   return (
     <Layout>
       <ol>
-        <li>
-          <Link href='profile/A'>A User</Link>
-        </li>
+        {profiles.map(profile => (
+          <li key={profile.id}>
+            <Link href={`profile/${profile.id}`}>
+              <div>
+                {profile.fullName} - {profile.age}
+              </div>
+            </Link>
+          </li>
+        ))}
       </ol>
     </Layout>
   )
+}
+
+export async function getServerSideProps () {
+  const response = await fetch('http://localhost:3001/people')
+  const profiles = await response.json()
+
+  return {
+    props: {
+      profiles
+    }
+  }
 }
 
 export default Home
