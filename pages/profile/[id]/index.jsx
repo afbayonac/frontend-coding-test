@@ -2,22 +2,43 @@ import Head from 'next/head'
 import Link from 'next/link'
 import Layout from '../../../components/Layout/Layout'
 
-function Profile () {
+// TODO: add message not found tasks
+function Profile ({ profile, tasks = [] }) {
+  console.log(profile, tasks)
   return (
     <Layout>
       <Head>
         <title> Tanabata User edit</title>
       </Head>
       <div>
-        A user <Link href='/profile/A/edit'>Edit</Link>
+        <h1>{profile.fullName}</h1>
+        <Link href={`/profile/${profile.id}/edit`}>Edit</Link>
       </div>
       <ol>
-        <li>
-          <Link href='/tasks/1/edit'>A Task</Link>
-        </li>
+        {tasks.map(task => (
+          <li key={task.id}>
+            <Link href={`/tasks/${task.id}/edit`}>{task.title}</Link>
+          </li>
+        ))}
       </ol>
     </Layout>
   )
+}
+
+export async function getServerSideProps ({ params }) {
+  const { id } = params
+  const responseProfile = await fetch(`http://localhost:3001/people/${id}`)
+  const profile = await responseProfile.json()
+
+  const responseTasks = await fetch(`http://localhost:3001/tasks?personId=${id}`)
+  const tasks = await responseTasks.json()
+
+  return {
+    props: {
+      profile,
+      tasks
+    }
+  }
 }
 
 export default Profile

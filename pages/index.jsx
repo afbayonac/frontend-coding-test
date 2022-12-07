@@ -2,8 +2,9 @@ import Link from 'next/link'
 import Layout from '../components/Layout/Layout'
 
 // TODO: add message when profiles are empty
+// TODO: catch server side errors
+
 function Home ({ profiles = [] }) {
-  console.log(profiles)
   return (
     <Layout>
       <ol>
