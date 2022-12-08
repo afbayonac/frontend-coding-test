@@ -27,7 +27,7 @@ function Home ({ profiles = [] }) {
             <li key={profile.id}>
               <Link href={`profile/${profile.id}`}>
                 <div>
-                  {profile.fullName} - {profile.age}
+                  {profile.fullName}  {profile.age} {profile.occupation} {profile.picture}
                 </div>
               </Link>
             </li>

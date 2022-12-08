@@ -1,17 +1,18 @@
 import Head from 'next/head'
 import Link from 'next/link'
+
 import Layout from '../../../components/Layout/Layout'
 
 // TODO: add message not found tasks
+
 function Profile ({ profile, tasks = [] }) {
-  console.log(profile, tasks)
   return (
     <Layout>
       <Head>
         <title> Tanabata User edit</title>
       </Head>
       <div>
-        <h1>{profile.fullName}</h1>
+        <h1>{profile.fullName}  {profile.age} {profile.occupation} {profile.picture}</h1>
         <Link href={`/profile/${profile.id}/edit`}>Edit</Link>
       </div>
       <ol>
