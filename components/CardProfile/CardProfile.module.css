@@ -1,0 +1,48 @@
+.card_profile {
+  display: flex;
+  border-radius: 4px;
+  overflow: hidden;
+  max-width: 320px;
+  max-height: 120px;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  color: white;
+  transition: all .3s ease-in-out; 
+}
+
+
+.card_profile:hover {
+  border: none;
+  transform: scale(1.05);
+}
+
+
+.card_profile__info {
+  background-color: var(--black);
+  width: 200px;
+  min-width: 200px;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.card_profile__info > h2, .card_profile__info > h3 {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.card_profile__info > h2 {
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+}
+
+.card_profile__info > sub {
+  font-size: 14px;
+  line-height: 24px;
+  display: block;
+}
+
+
