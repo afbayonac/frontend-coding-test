@@ -2,7 +2,7 @@ import Link from 'next/link'
 import Layout from '../components/Layout/Layout'
 import { useState } from 'react'
 import CardProfile from '../components/CardProfile/CardProfile'
-
+import styles from './index.module.css'
 // TODO: add message when profiles are empty
 // TODO: catch server side errors
 
@@ -15,10 +15,12 @@ function Home ({ profiles = [] }) {
 
   return (
     <Layout>
-      <div onClick={toggleSort}>
-        Age {sort === 'asc' ? '↓' : '↑'}
+      <div className={styles.sort}>
+        <button onClick={toggleSort}>
+          {sort === 'asc' ? '⭳' : '⭱'} Age
+        </button>
       </div>
-      <ol>
+      <ol className={styles.list}>
         {profiles
           .sort((a, b) => sort === 'asc'
             ? a.age - b.age

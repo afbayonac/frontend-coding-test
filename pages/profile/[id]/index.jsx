@@ -1,7 +1,8 @@
 import Head from 'next/head'
+import Image from 'next/image'
 import Link from 'next/link'
-
 import Layout from '../../../components/Layout/Layout'
+import styles from './index.module.css'
 
 // TODO: add message not found tasks
 
@@ -11,9 +12,17 @@ function Profile ({ profile, tasks = [] }) {
       <Head>
         <title> Tanabata User edit</title>
       </Head>
-      <div>
-        <h1>{profile.fullName}  {profile.age} {profile.occupation} {profile.picture}</h1>
-        <Link href={`/profile/${profile.id}/edit`}>Edit</Link>
+      <div className={styles.profile}>
+        <figure>
+          <Image width={128} height={128} objectFit='cover' alt={`picture of ${profile.fullName}`} src={profile.picture} />
+        </figure>
+        <h1>{profile.fullName}</h1>
+        <h2>{profile.nickname}</h2>
+        <h2>{profile.occupation}</h2>
+        <h2>{profile.age}</h2>
+        <Link href={`/profile/${profile.id}/edit`}>
+          <button>✎ Edit</button>
+        </Link>
       </div>
       <ol>
         {tasks.map(task => (

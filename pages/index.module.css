@@ -1,0 +1,42 @@
+.list {
+  display: grid;
+  grid-template-columns: 320px;
+  gap: 16px;
+  justify-content: center;
+}
+
+@media screen and (min-width: 720px) {
+  .list {
+    grid-template-columns: 320px 320px;
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  .list {
+    grid-template-columns: 320px 320px 320px;
+  }
+}
+
+.sort{
+  display: block;
+  text-align: right;
+  padding: 16px 0;
+} 
+
+.sort > button {
+  display: inline-block;
+  outline: 0;
+  border: none;
+  cursor: pointer;
+  height: 32px;
+  padding: 0px 16px;
+  border-radius: 50px;
+  background-color: #2222220d;
+  color: #222;
+  font-size: 12px;
+  font-weight: 500;
+} 
+
+.sort > button:hover {
+    background-color: #2222221a;
+}
