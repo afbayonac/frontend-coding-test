@@ -1,21 +1,16 @@
 import Head from 'next/head'
-import Link from 'next/link'
+import Header from '../Header/Header'
 
 const Layout = ({ children }) => {
   return (
     <>
       <Head>
-        <title> Tanabata </title>
-        <link rel='icon' type='image/png' href='/favicon.png' />
+        <title>Tanabata</title>
       </Head>
-      <header>
-        <nav>
-          <Link href='/'>Home</Link>
-        </nav>
-      </header>
+      <Header />
       <main>{children}</main>
       <footer>
-        make by afbayonac
+        make by <a target='_blank' rel='noreferrer' href='https://afbayonac.github.io/cv/'>afbayonac</a>
       </footer>
     </>
   )
