@@ -57,10 +57,10 @@
     {
       "id": 7,
       "fullName": "David Anderson",
-      "age": 38,
+      "age": 37,
       "occupation": "Police Officer",
       "nickname": "Dave",
-      "gender": "Male",
+      "gender": "Female",
       "picture": "https://randomuser.me/api/portraits/lego/7.jpg"
     },
     {

@@ -1,0 +1,14 @@
+:root {
+  --white: #ffffff;
+  --primary-color: #be1931;
+  --secondary-color: #5c913b;
+  --accent-color: #ffac33;
+  font-family: 'Lexend', sans-serif;
+}
+
+html {
+  background-color: var(--white);
+}
+
+
+
