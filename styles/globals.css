@@ -1,5 +1,6 @@
 :root {
   --white: #ffffff;
+  --black: #000;
   --primary-color: #be1931;
   --secondary-color: #5c913b;
   --accent-color: #ffac33;
@@ -8,6 +9,28 @@
 
 html {
   background-color: var(--white);
+}
+
+a {
+  all: unset;
+}
+
+button {
+  display: inline-block;
+  outline: 0;
+  border: none;
+  cursor: pointer;
+  height: 32px;
+  padding: 0px 16px;
+  border-radius: 50px;
+  background-color: #2222220d;
+  color: #222;
+  font-size: 12px;
+  font-weight: 500;
+} 
+
+button:hover {
+    background-color: #2222221a;
 }
 
 
