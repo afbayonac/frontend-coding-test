@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Layout from '../components/Layout/Layout'
 import { useState } from 'react'
+import CardProfile from '../components/CardProfile/CardProfile'
 
 // TODO: add message when profiles are empty
 // TODO: catch server side errors
@@ -26,9 +27,9 @@ function Home ({ profiles = [] }) {
           .map(profile => (
             <li key={profile.id}>
               <Link href={`profile/${profile.id}`}>
-                <div>
-                  {profile.fullName}  {profile.age} {profile.occupation} {profile.picture}
-                </div>
+                <a>
+                  <CardProfile {...profile} />
+                </a>
               </Link>
             </li>
           ))}
