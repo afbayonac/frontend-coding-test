@@ -1,0 +1,60 @@
+.card_task {
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+  gap: 8px;
+  overflow: hidden;
+  width: 320px;
+  height: 320px;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  transition: all .3s ease-in-out; 
+  box-sizing: border-box;
+  padding: 16px;
+}
+
+.card_task:hover {
+  transform: scale(1.02);
+}
+
+
+.card_task > footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  line-height: 12px;
+}
+
+.card_task > header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  line-height: 32px;
+}
+
+.card_task[data-completed="false"] > header > span {
+  color: var(--secondary-color);
+  width: 40%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.card_task[data-completed="true"] > header > span {
+  color: var(--primary-color);
+}
+
+
+.card_task > span {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  box-sizing: border-box;
+  line-height: 24px;
+  height: 288px;
+  overflow: auto;
+}
+
+
+
