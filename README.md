@@ -39,13 +39,13 @@ If the task has an `endDate` property that is set to a day before the current da
 
 **Note:** these requirements are not mandatory to submit the test.
 
-- [ ] To add a new person, the app must have a page that allows the user to enter the necessary information and create a new profile. This page can be located at `/profile/new`.
+- [x] To add a new person, the app must have a page that allows the user to enter the necessary information and create a new profile. This page can be located at `/profile/new`.
 
 On this page, the app should display a form that allows the user to enter the person's picture, full name, age, and occupation. These fields are all required, so the user must provide a value for each one in order to successfully save the new profile. The form should also include a submit button that the user can click to create the new profile and save the entered information.
 
 Additionally, the app should provide navigation options that allow the user to easily return to the homepage or other relevant pages, such as the profile page for the new person once it has been created. This can be achieved using links or other navigation controls on the page.
 
-- [ ] To add a new task, the app must have a page that allows the user to enter the necessary information and create a new task. This page can be located at `/tasks/new`.
+- [x] To add a new task, the app must have a page that allows the user to enter the necessary information and create a new task. This page can be located at `/tasks/new`.
 
 On this page, the app should display a form that allows the user to enter the task's title, description, and completed status. These fields are all required, so the user must provide a value for each one in order to successfully save the new task. Additionally, the form should include a field for the `endDate` property, which is optional but can be useful for tasks with a fixed completion date.
 

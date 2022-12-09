@@ -1,10 +1,19 @@
 .main {
   max-width: 1080px;
-  padding: 24px 16px;
+  padding: 16px 16px;
   margin: 0 auto;
 }
 
 .wrapper {
   min-height: 100vh;
   position: relative;
+}
+
+.nav {
+  padding: 16px 16px;
+}
+
+.nav > ul {
+  max-width: 1080px;
+  margin: 0 auto;
 }
