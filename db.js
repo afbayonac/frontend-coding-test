@@ -4,8 +4,10 @@ import path from 'path'
 const dbTemp = '/tmp/db.json'
 
 const initDB = async () => {
-  if (!fs.existsSync('/tmp')) {
-    fs.mkdirSync('/tmp')
+  try {
+    await fs.mkdir('/tmp')
+  } catch (e) {
+    console.info('Couldn\'t create tmp')
   }
   const db = JSON.parse(await fs.readFile(dbTemp))
   await fs.writeFile(dbTemp, JSON.stringify(db))
