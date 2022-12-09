@@ -10,7 +10,8 @@ const CardProfile = ({ picture, fullName, nickname, age, gender, occupation }) =
       <div className={styles.card_profile__info}>
         <h2>{fullName}</h2>
         <sub>{occupation}</sub>
-        <sub>{age} {gender}</sub>
+        <sub>{age} years</sub>
+        <sub>{gender}</sub>
       </div>
     </div>
   )

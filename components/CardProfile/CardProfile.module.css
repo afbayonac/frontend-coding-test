@@ -11,12 +11,9 @@
   transition: all .3s ease-in-out; 
 }
 
-
 .card_profile:hover {
-  border: none;
   transform: scale(1.05);
 }
-
 
 .card_profile__info {
   background-color: var(--black);
@@ -26,7 +23,7 @@
   box-sizing: border-box;
 }
 
-.card_profile__info > h2, .card_profile__info > h3 {
+.card_profile__info > h2, .card_profile__info > span {
   width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -40,8 +37,8 @@
 }
 
 .card_profile__info > sub {
-  font-size: 14px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 20px;
   display: block;
 }
 
