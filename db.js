@@ -1,12 +1,14 @@
 import db from './db.json'
 import fs from 'fs/promises'
+import path from 'path'
 
 const read = async () => {
   return JSON.parse(await fs.readFile('./db.json'))
 }
 
 const write = async (db) => {
-  return fs.writeFile('./db.json', JSON.stringify(db))
+  const ROUTE_CACHE_PATH = path.resolve(path.join(process.cwd(), './db.json'))
+  return fs.writeFile(ROUTE_CACHE_PATH, JSON.stringify(db))
 }
 
 const getAll = async (entity) => {
