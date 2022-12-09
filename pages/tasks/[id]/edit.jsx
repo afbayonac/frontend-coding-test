@@ -100,7 +100,7 @@ export async function getServerSideProps ({ params }) {
   const task = await responseTasks.json()
 
   if (
-    isEndDate() &&
+    isEndDate(task.endDate) &&
     isBeforeToday(task.endDate)
   ) {
     await fetch(`http://localhost:3001/tasks/${id}`, {
