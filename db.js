@@ -7,7 +7,6 @@ const initDB = async () => {
   if (!fs.existsSync('/tmp')) {
     fs.mkdirSync('/tmp')
   }
-
   const db = JSON.parse(await fs.readFile(dbTemp))
   await fs.writeFile(dbTemp, JSON.stringify(db))
 }
@@ -60,7 +59,7 @@ const put = async (entity, id, body) => {
 
   const put = { ...body, id }
 
-  console.log('save', put)
+  console.log('save:  ', put)
   await write({
     ...db,
     [entity]: db[entity].map(e => String(e.id) === id ? put : e)
