@@ -1,25 +1,20 @@
 import db from './db.json'
-import fs from 'fs/promises'
-import path from 'path'
-const dbTemp = '/tmp/db.json'
-
-const initDB = async () => {
-  try {
-    await fs.mkdir('/tmp')
-  } catch (e) {
-    console.info('Couldn\'t create tmp')
-  }
-  const db = JSON.parse(await fs.readFile(dbTemp))
-  await fs.writeFile(dbTemp, JSON.stringify(db))
-}
 
 const read = async () => {
-  return JSON.parse(await fs.readFile(dbTemp))
+  const response = await fetch('https://json.extendsclass.com/bin/9b60e8b40a6c')
+  return response.json()
 }
 
 const write = async (db) => {
-  const ROUTE_CACHE_PATH = path.resolve(path.join(process.cwd(), './db.json'))
-  return fs.writeFile(ROUTE_CACHE_PATH, JSON.stringify(db))
+  const response = await fetch('https://json.extendsclass.com/bin/9b60e8b40a6c', {
+    method: 'PUT',
+    headers: {
+      'Security-key': 'tanabata'
+    },
+    body: JSON.stringify(db)
+  })
+
+  return await response.json()
 }
 
 const getAll = async (entity) => {
@@ -61,7 +56,6 @@ const put = async (entity, id, body) => {
 
   const put = { ...body, id }
 
-  console.log('save:  ', put)
   await write({
     ...db,
     [entity]: db[entity].map(e => String(e.id) === id ? put : e)
@@ -77,7 +71,5 @@ export {
   post,
   put
 }
-
-initDB()
 
 export default db
