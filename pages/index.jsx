@@ -3,6 +3,7 @@ import Layout from '../components/Layout/Layout'
 import { useState } from 'react'
 import CardProfile from '../components/CardProfile/CardProfile'
 import styles from './index.module.css'
+import { getAllPeople } from '../services/people'
 // TODO: add message when profiles are empty
 // TODO: catch server side errors
 
@@ -41,8 +42,7 @@ function Home ({ profiles = [] }) {
 }
 
 export async function getServerSideProps () {
-  const response = await fetch('http://localhost:3001/people')
-  const profiles = await response.json()
+  const profiles = await getAllPeople()
 
   return {
     props: {

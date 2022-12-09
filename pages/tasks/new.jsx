@@ -3,6 +3,7 @@ import { useRouter } from 'next/router'
 import { useState } from 'react'
 import Input from '../../components/Input/Input'
 import Layout from '../../components/Layout/Layout'
+import { getAllPeople } from '../../services/people'
 import { postEntiy } from '../../utils/postEntity'
 import styles from './new.module.css'
 
@@ -175,8 +176,7 @@ function New ({ profiles }) {
 }
 
 export async function getServerSideProps () {
-  const response = await fetch('http://localhost:3001/people')
-  const profiles = await response.json()
+  const profiles = await getAllPeople()
 
   return {
     props: {

@@ -1,3 +1,4 @@
+import { postTask } from '../../../services/tasks'
 import { isBeforeToday, isEndDate } from '../../../utils/utils'
 
 export default async function userHandler (req, res) {
@@ -17,13 +18,7 @@ export default async function userHandler (req, res) {
       body.completed = true
     }
 
-    const response = await fetch('http://localhost:3001/tasks', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(body)
-    })
-
-    const tasks = await response.json()
+    const tasks = await postTask(body)
 
     res.status(200).json(tasks)
   } else {

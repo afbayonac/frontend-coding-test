@@ -2,8 +2,8 @@
   "people": [
     {
       "id": 1,
-      "fullName": "Felipe Bayona",
-      "age": 27,
+      "fullName": "Felipe Chinchilla",
+      "age": 28,
       "occupation": "Programmer",
       "nickname": "afbayonac",
       "gender": "Male",
@@ -50,7 +50,7 @@
       "fullName": "Jose Villa Perez",
       "age": 25,
       "occupation": "Mariachi",
-      "nickname": "Jos Villa",
+      "nickname": "Jose Villa",
       "gender": "Male",
       "picture": "https://randomuser.me/api/portraits/lego/6.jpg"
     },
@@ -168,9 +168,9 @@
       "id": 9,
       "title": "New car",
       "description": "I need money for a new car, only for this time",
-      "completed": true,
+      "completed": false,
       "startDate": "2022-12-02",
-      "endDate": "2022-12-03",
+      "endDate": "2022-12-01",
       "personId": 9
     },
     {
@@ -193,7 +193,7 @@
     {
       "id": 12,
       "title": "Cut body",
-      "description": "Cut the other body for the next act ",
+      "description": "Cut the other body for the next act.",
       "completed": false,
       "startDate": "2022-12-22",
       "endDate": "",
@@ -228,10 +228,10 @@
     },
     {
       "id": 16,
-      "title": "Search my hat",
-      "description": "Search in place of explotion and the apartment my wife's best friend..",
+      "title": "Search my hat2",
+      "description": "Search in place of explotion and the apartment my wife's best friend.. ",
       "completed": true,
-      "startDate": "2022-12-16",
+      "startDate": "2022-12-08",
       "endDate": "2022-12-08",
       "personId": 6
     },
@@ -257,9 +257,9 @@
       "id": 19,
       "title": "Ajust balance",
       "description": "after of explotion the directives are checking the acounts, my car is in danger.",
-      "completed": false,
+      "completed": true,
       "startDate": "2022-12-08",
-      "endDate": "2022-12-14",
+      "endDate": "2022-12-01",
       "personId": 9
     },
     {
@@ -272,256 +272,22 @@
       "personId": 10
     },
     {
-      "completed": false,
-      "startDate": "",
-      "endDate": "",
-      "description": "asdasdasdas",
-      "profile": "",
-      "id": 21
-    },
-    {
-      "completed": false,
-      "startDate": "",
-      "endDate": "",
-      "description": "asdasdasdas",
-      "profile": "",
-      "id": 22
-    },
-    {
-      "completed": false,
-      "startDate": "",
-      "endDate": "",
-      "description": "asdasdasdas",
-      "profile": "",
-      "id": 23
-    },
-    {
-      "completed": false,
-      "startDate": "",
-      "endDate": "",
-      "description": "12312312",
-      "profile": "",
-      "id": 24
-    },
-    {
-      "completed": false,
-      "startDate": "",
-      "endDate": "",
-      "description": "12312312",
-      "profile": "",
-      "id": 25
-    },
-    {
-      "completed": false,
-      "startDate": "",
-      "endDate": "",
-      "description": "12312312",
-      "profile": "",
-      "id": 26
-    },
-    {
-      "completed": false,
-      "startDate": "",
-      "endDate": "",
-      "description": "12312",
-      "profile": "",
-      "id": 27
-    },
-    {
-      "completed": false,
-      "startDate": "",
-      "endDate": "",
-      "description": "12312",
-      "profile": "",
-      "id": 28
-    },
-    {
-      "completed": false,
-      "startDate": "",
-      "endDate": "",
-      "description": "12312",
-      "profile": "",
-      "id": 29
-    },
-    {
-      "completed": false,
-      "startDate": "",
-      "endDate": "",
-      "description": "12312",
-      "profile": "",
-      "id": 30
-    },
-    {
-      "completed": false,
-      "startDate": "",
-      "endDate": "",
-      "description": "1234213",
-      "profile": "",
-      "id": 31
-    },
-    {
-      "completed": false,
-      "startDate": "",
-      "endDate": "",
-      "description": "1234123",
-      "profile": "",
-      "id": 32
-    },
-    {
-      "completed": false,
-      "startDate": "",
-      "endDate": "",
-      "description": "234123",
-      "profile": "",
-      "id": 33
-    },
-    {
-      "completed": false,
-      "startDate": "",
-      "endDate": "",
-      "description": "12312",
-      "profile": "",
-      "id": 34
-    },
-    {
-      "completed": false,
-      "startDate": "",
-      "endDate": "",
-      "description": "12312",
-      "profile": "",
-      "id": 35
-    },
-    {
-      "completed": false,
-      "startDate": "",
-      "endDate": "",
-      "description": "12312",
-      "profile": "",
-      "id": 36
-    },
-    {
-      "completed": false,
-      "startDate": "",
-      "endDate": "",
-      "description": "12312",
-      "profile": "",
-      "id": 37
-    },
-    {
-      "completed": false,
-      "startDate": "",
-      "endDate": "",
-      "description": "12312",
-      "profile": "",
-      "id": 38
-    },
-    {
-      "title": "123123as1",
-      "completed": false,
-      "startDate": "",
-      "endDate": "",
-      "description": "12312",
-      "profile": "",
-      "id": 39
-    },
-    {
-      "title": "123123as1",
-      "completed": true,
-      "startDate": "",
-      "endDate": "",
-      "description": "12312",
-      "profile": "",
-      "id": 40
-    },
-    {
-      "title": "123123as1",
-      "completed": false,
-      "startDate": "",
-      "endDate": "",
-      "description": "12312",
-      "profile": "",
-      "id": 41
-    },
-    {
-      "title": "123123as1",
-      "completed": false,
-      "startDate": "",
-      "endDate": "",
-      "description": "12312",
-      "profile": "",
-      "id": 42
-    },
-    {
-      "title": "123123as1",
-      "completed": false,
-      "startDate": "",
-      "endDate": "",
-      "description": "12312",
-      "profile": "",
-      "id": 43
-    },
-    {
-      "title": "123123as1",
-      "completed": false,
-      "startDate": "",
-      "endDate": "",
-      "description": "12312",
-      "profile": "7",
-      "id": 44
-    },
-    {
-      "title": "asdasd",
-      "completed": true,
-      "startDate": "2022-12-15",
-      "endDate": "",
-      "description": "awdasdasd",
-      "profile": "5",
-      "id": 45
-    },
-    {
-      "title": "asdasd",
-      "completed": true,
-      "startDate": "2022-12-15",
-      "endDate": "",
-      "description": "awdasdasd",
-      "profile": "5",
-      "id": 46
-    },
-    {
-      "title": "asdasd",
-      "completed": true,
-      "startDate": "2022-12-15",
-      "endDate": "",
-      "description": "awdasdasd",
-      "profile": "5",
-      "id": 47
-    },
-    {
-      "title": "123123",
-      "completed": true,
-      "startDate": "2022-12-01",
-      "endDate": "",
-      "description": "123123123",
-      "profile": "1",
-      "id": 48
-    },
-    {
-      "title": "asdasdasda",
-      "completed": false,
-      "startDate": "2022-12-16",
-      "endDate": "",
-      "description": "asdasdasd",
-      "profile": 1,
-      "id": 49
-    },
-    {
       "title": "Examen",
       "completed": true,
       "startDate": "2023-01-11",
       "endDate": "2023-03-02",
       "description": "Urgent exam",
       "personId": 3,
-      "id": 50
+      "id": 21
+    },
+    {
+      "title": "New Task",
+      "completed": false,
+      "startDate": "2022-12-15",
+      "endDate": "",
+      "description": "new task",
+      "personId": 1,
+      "id": 22
     }
   ]
 }

@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Input from '../../../components/Input/Input'
 import Layout from '../../../components/Layout/Layout'
+import { getPeopleById } from '../../../services/people'
 import style from './edit.module.css'
 
 function Edit ({ profile }) {
@@ -95,10 +96,7 @@ function Edit ({ profile }) {
 export async function getServerSideProps ({ params }) {
   const { id } = params
 
-  const response = await fetch(`http://localhost:3001/people/${id}`)
-  const profile = await response.json()
-
-  console.log(profile)
+  const profile = await getPeopleById(id)
 
   return {
     props: {

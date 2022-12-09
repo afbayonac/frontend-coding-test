@@ -3,6 +3,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 import CardTask from '../../../components/CardTask/CardTask'
 import Layout from '../../../components/Layout/Layout'
+import { getPeopleById } from '../../../services/people'
+import { getAllTaskByPeople } from '../../../services/tasks'
 import styles from './index.module.css'
 
 // TODO: add message not found tasks
@@ -42,11 +44,8 @@ function Profile ({ profile, tasks = [] }) {
 
 export async function getServerSideProps ({ params }) {
   const { id } = params
-  const responseProfile = await fetch(`http://localhost:3001/people/${id}`)
-  const profile = await responseProfile.json()
-
-  const responseTasks = await fetch(`http://localhost:3001/tasks?personId=${id}`)
-  const tasks = await responseTasks.json()
+  const profile = await getPeopleById(id)
+  const tasks = await getAllTaskByPeople(id)
 
   return {
     props: {

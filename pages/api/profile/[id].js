@@ -1,3 +1,5 @@
+import { getPeopleById, putPeople } from '../../../services/people'
+
 export default async function userHandler (req, res) {
   const {
     query: { id },
@@ -8,23 +10,14 @@ export default async function userHandler (req, res) {
   console.log(body)
 
   if (method === 'PUT') {
-    const response = await fetch(`http://localhost:3001/people/${id}`)
-    const profile = await response.json()
+    const profile = await getPeopleById(id)
 
-    const responsePUT = await fetch(`http://localhost:3001/people/${id}`, {
-      method: 'PUT',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        ...profile,
-        ...JSON.parse(body)
-      })
+    const profileUpdate = await putPeople(id, {
+      ...profile,
+      ...JSON.parse(body)
     })
 
-    const profilePUT = await responsePUT.json()
-
-    res.status(200).json(profilePUT)
+    res.status(200).json(profileUpdate)
   } else {
     res.setHeader('Allow', ['PUT'])
     res.status(405).end(`Method ${method} Not Allowed`)

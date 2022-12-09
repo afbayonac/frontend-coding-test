@@ -1,3 +1,4 @@
+import { getTaskById, putTask } from '../../../services/tasks'
 import { isBeforeToday, isEndDate } from '../../../utils/utils'
 
 export default async function userHandler (req, res) {
@@ -7,8 +8,7 @@ export default async function userHandler (req, res) {
   } = req
 
   if (method === 'PUT') {
-    const response = await fetch(`http://localhost:3001/tasks/${id}`)
-    const task = await response.json()
+    const task = await getTaskById(id)
     const body = JSON.parse(req.body)
 
     if (
@@ -29,21 +29,12 @@ export default async function userHandler (req, res) {
       body.completed = true
     }
 
-    const responsePUT = await fetch(`http://localhost:3001/tasks/${id}`, {
-      method: 'PUT',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        ...task,
-        ...body
-      })
+    const taskUpdate = await putTask(id, {
+      ...task,
+      ...body
     })
 
-    const profilePUT = await responsePUT.json()
-
-    console.log(profilePUT)
-    res.status(200).json(profilePUT)
+    res.status(200).json(taskUpdate)
   } else {
     res.setHeader('Allow', ['PUT'])
     res.status(405).end(`Method ${method} Not Allowed`)

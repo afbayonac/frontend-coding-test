@@ -1,3 +1,5 @@
+import { postPeople } from '../../../services/people'
+
 export default async function userHandler (req, res) {
   const {
     method
@@ -5,14 +7,7 @@ export default async function userHandler (req, res) {
 
   if (method === 'POST') {
     const body = JSON.parse(req.body)
-
-    const response = await fetch('http://localhost:3001/people', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(body)
-    })
-
-    const tasks = await response.json()
+    const tasks = await postPeople(body)
 
     res.status(200).json(tasks)
   } else {

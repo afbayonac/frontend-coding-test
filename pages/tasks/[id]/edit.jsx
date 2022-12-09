@@ -2,6 +2,7 @@ import Head from 'next/head'
 import { useState } from 'react'
 import Input from '../../../components/Input/Input'
 import Layout from '../../../components/Layout/Layout'
+import { getTaskById, putTask } from '../../../services/tasks'
 import { isBeforeToday, isEndDate } from '../../../utils/utils'
 import styles from './edit.module.css'
 
@@ -16,7 +17,6 @@ function Edit ({ task }) {
       isEndDate(value) &&
       isBeforeToday(value)
     ) {
-      console.log('ok')
       setCompleted(true)
     }
   }
@@ -25,13 +25,12 @@ function Edit ({ task }) {
     setCompleted(value)
   }
 
-  console.log(_completed)
   return (
     <Layout>
       <Head>
         <title> Tanabata Task Edit </title>
       </Head>
-      <h1 className={styles.title}> Edit task <span>{task.id}</span></h1>
+      <h1 className={styles.title}> Edit task <span>{id}</span></h1>
       <div className={styles.edit}>
         <Input
           label='Title *'
@@ -95,22 +94,13 @@ function Edit ({ task }) {
 
 export async function getServerSideProps ({ params }) {
   const { id } = params
-
-  const responseTasks = await fetch(`http://localhost:3001/tasks/${id}`)
-  const task = await responseTasks.json()
+  const task = await getTaskById(id)
 
   if (
     isEndDate(task.endDate) &&
     isBeforeToday(task.endDate)
   ) {
-    await fetch(`http://localhost:3001/tasks/${id}`, {
-      method: 'PUT',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({ ...task, completed: true })
-    })
-
+    putTask(id, { ...task, completed: true })
     task.completed = true
   }
 

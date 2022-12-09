@@ -160,7 +160,7 @@ function New () {
           entity='profile'
           name='picture'
           callback={handlerPicture}
-          error='shuld be like: https://randomuser.me/img.png'
+          error='shuld be like: https://randomuser.me/api/portraits/lego/3.jpg'
           isValid={v => !!String(v).match(/^(https:\/\/randomuser\.me)([/|.|\w|\s|-])*\.(?:jpg|gif|png)$/)}
           sanitizer={v => String(v).replace(/[^\w/:-_.]/mg, '')}
         />
