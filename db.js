@@ -1,9 +1,15 @@
 import db from './db.json'
 import fs from 'fs/promises'
 import path from 'path'
+const dbTemp = '/tmp/db.json'
+
+const initDB = async () => {
+  const db = JSON.parse(await fs.readFile(dbTemp))
+  await fs.writeFile(dbTemp, JSON.stringify(db))
+}
 
 const read = async () => {
-  return JSON.parse(await fs.readFile('./db.json'))
+  return JSON.parse(await fs.readFile(dbTemp))
 }
 
 const write = async (db) => {
@@ -66,5 +72,7 @@ export {
   post,
   put
 }
+
+initDB()
 
 export default db
