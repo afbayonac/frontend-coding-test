@@ -2,10 +2,10 @@
   "people": [
     {
       "id": 1,
-      "fullName": "Felipe Bayona",
-      "age": 27,
-      "occupation": "Developer Frontend",
-      "nickname": "afbayonac",
+      "fullName": "Felipe Bayona Chinchilla",
+      "age": 9,
+      "occupation": "Developer Frontend 123412",
+      "nickname": "afbayonac123412",
       "gender": "Male",
       "picture": "https://randomuser.me/api/portraits/lego/1.jpg"
     },
@@ -21,10 +21,10 @@
     {
       "id": 3,
       "fullName": "Bob Johnson",
-      "age": 45,
-      "occupation": "Teacher 2",
+      "age": 64,
+      "occupation": "Teacher",
       "nickname": "Bobbyas",
-      "gender": "Female",
+      "gender": "Male",
       "picture": "https://randomuser.me/api/portraits/lego/3.jpg"
     },
     {
@@ -47,28 +47,28 @@
     },
     {
       "id": 6,
-      "fullName": "Emily Davis",
+      "fullName": "other example",
       "age": 36,
-      "occupation": "Nurse",
-      "nickname": "Em",
+      "occupation": "Nurse In comuneros",
+      "nickname": "example2",
       "gender": "Female",
       "picture": "https://randomuser.me/api/portraits/lego/6.jpg"
     },
     {
       "id": 7,
       "fullName": "David Anderson",
-      "age": 37,
-      "occupation": "Police Officer",
+      "age": 38,
+      "occupation": "Police Officer ok",
       "nickname": "Dave",
-      "gender": "Female",
+      "gender": "Male",
       "picture": "https://randomuser.me/api/portraits/lego/7.jpg"
     },
     {
       "id": 8,
-      "fullName": "Samantha Taylor",
+      "fullName": "Samantha Taylor Samantha Taylor ",
       "age": 26,
-      "occupation": "Graphic Designer",
-      "nickname": "Sam",
+      "occupation": "Graphic Designer222222222",
+      "nickname": "Sam222222222222",
       "gender": "Male",
       "picture": "https://randomuser.me/api/portraits/lego/8.jpg"
     },
@@ -83,10 +83,10 @@
     },
     {
       "id": 10,
-      "fullName": "Ashley Johnson",
-      "age": 30,
-      "occupation": "Salespeople",
-      "nickname": "Ash",
+      "fullName": "Ashley Johnson Andres ",
+      "age": 111,
+      "occupation": "alguna cosa",
+      "nickname": "ashdelta",
       "gender": "Female",
       "picture": "https://randomuser.me/api/portraits/lego/1.jpg"
     }
@@ -95,10 +95,10 @@
     {
       "id": 1,
       "title": "Task 1",
-      "description": "This is the first task on the list.",
-      "completed": false,
-      "startDate": "2022-12-04",
-      "endDate": null,
+      "description": "This is the first task on the list.This is the first task on the list.This is the first task on the list.This is the first task on the list.This is the first task on the list.This is the first task on the list.This is the first task on the list.This is the first task on the list.This is the first task on the list.This is the first task on the list.This is the first task on the list.This is the first task on the list.This is the first task on the list.This is the first task on the list.This is the first task on the list.This is the first task on the list.This is the first task on the list.This is the first task on the list.This is the first task on the list.This is the first task on the list.This is the first task on the list.This is the first task on the list.This is the first task on the list.This is the first task on the list.This is the first task on the list.This is the first task on the list.This is the first task on the list.This is the first task on the list.This is the first task on the list.This is the first task on the list.This is the first task on the list.This is the first task on the list.This is the first task on the list.This is the first task on the list.This is the first task on the list.This is the first task on the list.This is the first task on the list.This is the first task on the list.This is the first task on the list.This is the first task on the list.",
+      "completed": true,
+      "startDate": "2022-12-22",
+      "endDate": "2022-12-02",
       "personId": 1
     },
     {
@@ -133,7 +133,7 @@
       "title": "Task 5",
       "description": "This is the fifth task on the list.",
       "completed": false,
-      "startDate": "2022-12-04",
+      "startDate": "2022-12-30",
       "endDate": null,
       "personId": 5
     },
@@ -143,32 +143,32 @@
       "description": "This is the sixth task on the list.",
       "completed": true,
       "startDate": "2022-12-04",
-      "endDate": "2022-12-07",
+      "endDate": "2022-12-30",
       "personId": 6
     },
     {
       "id": 7,
       "title": "Task 7",
       "description": "This is the seventh task on the list.",
-      "completed": false,
+      "completed": true,
       "startDate": "2022-12-04",
       "endDate": null,
       "personId": 7
     },
     {
       "id": 8,
-      "title": "Task 8",
+      "title": "Task ID sss",
       "description": "This is the eighth task on the list.",
-      "completed": true,
+      "completed": false,
       "startDate": "2022-12-10",
-      "endDate": "0005-11-13",
+      "endDate": "2022-12-08",
       "personId": 8
     },
     {
       "id": 9,
       "title": "Task 9",
       "description": "This is the ninth task on the list.",
-      "completed": true,
+      "completed": false,
       "startDate": "2022-12-04",
       "endDate": null,
       "personId": 9
@@ -192,11 +192,11 @@
     },
     {
       "id": 12,
-      "title": "Task 12",
+      "title": "Task 12 cxvasd",
       "description": "This is the twelfth task on the list.",
       "completed": true,
       "startDate": "2022-12-04",
-      "endDate": "2022-12-05",
+      "endDate": "2022-12-07",
       "personId": 2
     },
     {
@@ -219,20 +219,20 @@
     },
     {
       "id": 15,
-      "title": "Task 15",
+      "title": "Task 15 22222222222222222",
       "description": "This is the fifteenth task on the list.",
       "completed": false,
-      "startDate": "2022-12-04",
-      "endDate": null,
+      "startDate": "2022-12-01",
+      "endDate": "2022-12-15",
       "personId": 5
     },
     {
       "id": 16,
       "title": "Task 16",
-      "description": "This is the sixteenth task on the list.",
-      "completed": false,
-      "startDate": "2022-12-04",
-      "endDate": null,
+      "description": "This is the sixteenth task on the list.This is the sixteenth task on the list.",
+      "completed": true,
+      "startDate": "2022-12-22",
+      "endDate": "2022-12-08",
       "personId": 6
     },
     {
@@ -241,22 +241,22 @@
       "description": "This is the seventeenth task on the list.",
       "completed": true,
       "startDate": "2022-12-04",
-      "endDate": "2022-12-05",
+      "endDate": "2022-12-07",
       "personId": 7
     },
     {
       "id": 18,
-      "title": "Task 18",
-      "description": "This is the eighteenth task on the list.",
+      "title": "Hacer la compra",
+      "description": "Voy ha hacer la compra de vejetales mannana",
       "completed": false,
       "startDate": "2022-12-04",
-      "endDate": null,
+      "endDate": "",
       "personId": 8
     },
     {
       "id": 19,
-      "title": "Task 19",
-      "description": "This is the nineteenth task on the list.",
+      "title": "Task 1",
+      "description": "This is the nineteenth task on the list.\nthe other time",
       "completed": true,
       "startDate": "2022-12-04",
       "endDate": "2022-12-06",
@@ -265,10 +265,10 @@
     {
       "id": 20,
       "title": "Task 20",
-      "description": "This is the twentieth task on the list.",
-      "completed": false,
-      "startDate": "2022-12-04",
-      "endDate": null,
+      "description": "A good description",
+      "completed": true,
+      "startDate": "2022-12-14",
+      "endDate": "",
       "personId": 10
     }
   ]

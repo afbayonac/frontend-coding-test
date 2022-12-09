@@ -26,6 +26,10 @@
   line-height: 12px;
 }
 
+.card_task > footer > span[data-end="true"] {
+  color: var(--primary-color);
+}
+
 .card_task > header {
   display: flex;
   justify-content: space-between;
@@ -33,12 +37,16 @@
   line-height: 32px;
 }
 
-.card_task[data-completed="false"] > header > span {
+.card_task > header > span {
   color: var(--primary-color);
-  width: 40%;
+  width: 50%;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+.card_task[data-completed="false"] > header > span {
+  color: var(--primary-color);
 }
 
 .card_task[data-completed="true"] > header > span {

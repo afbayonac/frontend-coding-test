@@ -1,4 +1,4 @@
-import { isBeforeToday } from "../../../utils/utils"
+import { isBeforeToday, isEndDate } from '../../../utils/utils'
 
 export default async function userHandler (req, res) {
   const {
@@ -14,15 +14,20 @@ export default async function userHandler (req, res) {
     if (
       Object.hasOwn(body, 'completed') &&
       body.completed === false &&
-      task.endDate !== null &&
-      task.endDate !== undefined &&
-      isBeforeToday(new Date(task.endDate))
+      isEndDate(task.endDate) &&
+      isBeforeToday(task.endDate)
     ) {
-      console.log('isBeforeToday')
       return res.status(400).json({ message: 'error' })
     }
 
-    console.log(body)
+    if (
+      Object.hasOwn(body, 'endDate') &&
+      task.completed === false &&
+      isEndDate(task.endDate) &&
+      isBeforeToday(task.endDate)
+    ) {
+      body.completed = true
+    }
 
     const responsePUT = await fetch(`http://localhost:3001/tasks/${id}`, {
       method: 'PUT',

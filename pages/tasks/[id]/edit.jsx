@@ -1,12 +1,31 @@
 import Head from 'next/head'
+import { useState } from 'react'
 import Input from '../../../components/Input/Input'
 import Layout from '../../../components/Layout/Layout'
-import { isBeforeToday } from '../../../utils/utils'
+import { isBeforeToday, isEndDate } from '../../../utils/utils'
 import styles from './edit.module.css'
 
 function Edit ({ task }) {
   const { id, title, description, startDate, endDate, completed } = task
+  const [_completed, setCompleted] = useState(completed)
 
+  const handlerEndDate = (value) => {
+    console.log(_completed, value)
+    if (
+      _completed === false &&
+      isEndDate(value) &&
+      isBeforeToday(value)
+    ) {
+      console.log('ok')
+      setCompleted(true)
+    }
+  }
+
+  const handlerCompleted = (value) => {
+    setCompleted(value)
+  }
+
+  console.log(_completed)
   return (
     <Layout>
       <Head>
@@ -38,10 +57,11 @@ function Edit ({ task }) {
         />
         <Input
           label='Completed'
-          initValue={completed}
+          initValue={_completed}
           type='checkbox'
           entity='tasks'
           name='completed'
+          callback={handlerCompleted}
           id={id}
           isValid={v => true}
           sanitizer={v => Boolean(v)}
@@ -62,6 +82,7 @@ function Edit ({ task }) {
           type='date'
           entity='tasks'
           name='endDate'
+          callback={handlerEndDate}
           id={id}
           isValid={v => !!String(v).match(/^\d{4}-\d{2}-\d{2}$|^$/)}
           sanitizer={v => String(v).replace(/[^0-9-]/mg, '')}
@@ -79,10 +100,8 @@ export async function getServerSideProps ({ params }) {
   const task = await responseTasks.json()
 
   if (
-    task.completed === false &&
-    task.endDate !== null &&
-    task.endDate !== undefined &&
-    isBeforeToday(new Date(task.endDate))
+    isEndDate() &&
+    isBeforeToday(task.endDate)
   ) {
     await fetch(`http://localhost:3001/tasks/${id}`, {
       method: 'PUT',
@@ -94,8 +113,6 @@ export async function getServerSideProps ({ params }) {
 
     task.completed = true
   }
-
-  console.log(task)
 
   return {
     props: {

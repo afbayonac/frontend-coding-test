@@ -29,6 +29,14 @@ button {
   font-weight: 500;
 } 
 
+button:disabled {
+  color: #aaa;
+} 
+button:disabled:hover {
+  background-color:#2222220d;
+  cursor: not-allowed;
+}
+
 button:hover {
     background-color: #2222221a;
 }

@@ -4,12 +4,17 @@ import styles from './Input.module.css'
 
 // TODO arrow select
 
-const Input = ({ id, entity, name, initValue, label, isValid, sanitizer, as = 'input', type, children, error, callback, ...props }) => {
+const Input = ({ id, entity, name, initValue, label, isValid, sanitizer, as = 'input', type, children, error, callback, min, max, minLength, maxLength, rows }) => {
   const [timer, setTimer] = useState(null)
   const CustomTag = as
+
   const [state, setState] = useState({
-    ...props,
     type,
+    min,
+    max,
+    minLength,
+    maxLength,
+    rows,
     value: initValue,
     ...(type === 'checkbox'
       ? { checked: initValue }
@@ -20,7 +25,6 @@ const Input = ({ id, entity, name, initValue, label, isValid, sanitizer, as = 'i
   })
 
   const changeState = (value) => {
-    console.log(value)
     if (timer !== null) {
       clearTimeout(timer)
       setTimer(null)
@@ -42,6 +46,27 @@ const Input = ({ id, entity, name, initValue, label, isValid, sanitizer, as = 'i
       )
     })
   }
+
+  useEffect(() => {
+    const setInitValue = async () => {
+      setState({
+        type,
+        min,
+        max,
+        minLength,
+        rows,
+        value: initValue,
+        ...(type === 'checkbox'
+          ? { checked: initValue }
+          : {}
+        ),
+        'data-state': 'idle',
+        'data-base': initValue
+      })
+    }
+
+    setInitValue()
+  }, [initValue, type, min, max, minLength, maxLength, rows])
 
   useEffect(() => {
     if (state['data-state'] !== 'valid') return
