@@ -7,8 +7,6 @@ export default async function userHandler (req, res) {
     method
   } = req
 
-  console.log(body)
-
   if (method === 'PUT') {
     const profile = await getPeopleById(id)
 

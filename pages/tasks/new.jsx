@@ -60,7 +60,6 @@ function New ({ profiles }) {
   })
 
   const handlerProfile = (value, state) => {
-    console.log(value, state)
     setProfile({
       value,
       state
@@ -80,8 +79,6 @@ function New ({ profiles }) {
       description: description.value,
       personId: Number(profile.value)
     }
-
-    console.log(body)
 
     const saved = await postEntiy('tasks', body)
 

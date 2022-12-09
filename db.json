@@ -1,1 +1,293 @@
-{"people":[{"id":1,"fullName":"Felipe Chinchilla","age":28,"occupation":"Programmer","nickname":"afbayonac","gender":"Male","picture":"https://randomuser.me/api/portraits/lego/1.jpg"},{"id":2,"fullName":"Christopher Nicholas Sarantakos","age":54,"occupation":"illusionist","nickname":"Criss Angel","gender":"Male","picture":"https://randomuser.me/api/portraits/lego/2.jpg"},{"id":3,"fullName":"Bob Johnson","age":64,"occupation":"Doctor","nickname":"Bobbyas","gender":"Male","picture":"https://randomuser.me/api/portraits/lego/3.jpg"},{"id":4,"fullName":"Don Quixote","age":70,"occupation":"knight","nickname":"Quixote","gender":"Male","picture":"https://randomuser.me/api/portraits/lego/4.jpg"},{"id":5,"fullName":"Elvis Aaron Presley","age":110,"occupation":"Singer","nickname":"Elvis","gender":"Male","picture":"https://randomuser.me/api/portraits/lego/5.jpg"},{"id":6,"fullName":"Jose Villa Perez","age":25,"occupation":"Mariachi","nickname":"Jose Villa","gender":"Male","picture":"https://randomuser.me/api/portraits/lego/6.jpg"},{"id":7,"fullName":"Michael Brown","age":38,"occupation":"Construction Worker","nickname":"Mike","gender":"Male","picture":"https://randomuser.me/api/portraits/lego/7.jpg"},{"id":8,"fullName":"Gordon James Ramsay","age":56,"occupation":"Chef","nickname":"Gordon","gender":"Male","picture":"https://randomuser.me/api/portraits/lego/8.jpg"},{"id":9,"fullName":"Isabela Rodriges","age":22,"occupation":"Accountant","nickname":"isab","gender":"Female","picture":"https://randomuser.me/api/portraits/lego/9.jpg"},{"id":10,"fullName":"Andres Johnson","age":79,"occupation":"Bus Driver","nickname":"hero","gender":"Male","picture":"https://randomuser.me/api/portraits/lego/1.jpg"},{"fullName":"Name","nickname":"asdf","occupation":"asdf","age":33,"gender":"Female","picture":"https://randomuser.me/api/portraits/lego/3.jpg","id":"11"}],"tasks":[{"id":1,"title":"Upload Vercel","description":"Change server json for a db json local to upload a vercel","completed":true,"startDate":"2022-12-09","endDate":"2022-12-10","personId":1},{"id":2,"title":"End magic act","description":"Recovering the participant's body from the day of the unknown dimension explosion","completed":false,"startDate":"2022-12-04","endDate":"2022-12-22","personId":2},{"id":3,"title":"Retrieve my tweezers","description":"Retrieve my tweezers in the next operation, they were left inside the patient from the explosion.","completed":false,"startDate":"2022-12-04","endDate":null,"personId":3},{"id":4,"title":"Search for my spear","description":"I left it stuck in the giant","completed":false,"startDate":"2022-12-01","endDate":"2022-12-30","personId":4},{"id":5,"title":"Task 5","description":"This is the fifth task on the list.","completed":false,"startDate":"2022-12-30","endDate":null,"personId":5},{"id":6,"title":"Singing lessons","description":"resume singing lessons, I don't know, if drugs or explotion left my throat broken","completed":false,"startDate":"2022-12-16","endDate":"","personId":6},{"id":7,"title":"Hiding the concrete tests","description":"The prosecution is looking for structural faults, cheap concrete can land me in jail.","completed":true,"startDate":"2022-12-09","endDate":"2022-12-29","personId":7},{"id":8,"title":"Cry","description":"crying over spilt milk, in the exploitation","completed":false,"startDate":"2022-12-08","endDate":"2022-12-22","personId":8},{"id":9,"title":"New car","description":"I need money for a new car, only for this time","completed":false,"startDate":"2022-12-02","endDate":"2022-12-01","personId":9},{"id":10,"title":"Task 10","description":"This is the tenth task on the list.","completed":true,"startDate":"2022-12-04","endDate":null},{"id":"11","title":"Remove console logss","description":"Remove all console logs","completed":false,"startDate":"2022-12-09","endDate":null,"personId":1},{"id":12,"title":"Cut body","description":"Cut the other body for the next act.","completed":false,"startDate":"2022-12-22","endDate":"","personId":2},{"id":13,"title":"Insulin replacement","description":"asing to a pacient","completed":false,"startDate":"2022-12-07","endDate":"2022-12-21","personId":3},{"id":14,"title":"Take my pills","description":"for colds ","completed":true,"startDate":"2022-12-01","endDate":"2022-12-15","personId":4},{"id":15,"title":"Task 15 22222222222222222","description":"This is the fifteenth task on the list.","completed":false,"startDate":"2022-12-01","endDate":"2022-12-15","personId":5},{"id":"16","title":"Search my hat","description":"Search in place of explotion and the apartment my wife's best friend.....","completed":true,"startDate":"2022-12-08","endDate":"2022-12-08","personId":6},{"id":17,"title":"Move the money","description":"Move money to the Cayman Islands","completed":false,"startDate":"2022-12-15","endDate":"","personId":7},{"id":18,"title":"Insult my assistants","description":"for be happy","completed":false,"startDate":"2022-12-04","endDate":"","personId":8},{"id":19,"title":"Ajust balance","description":"after of explotion the directives are checking the acounts, my car is in danger. ok","completed":true,"startDate":"2022-12-08","endDate":"2022-12-01","personId":9},{"id":20,"title":"Change brakes","description":"Cambiar de frenos, Sera que soy capaz de hacer una ruta sin frenos?","completed":false,"startDate":"2022-12-14","endDate":"","personId":10},{"title":"Examen","completed":true,"startDate":"2023-01-11","endDate":"2023-03-02","description":"Urgent exam","personId":3,"id":21},{"title":"New Task","completed":false,"startDate":"2022-12-15","endDate":"","description":"new task","personId":1,"id":22}]}
+{
+  "people": [
+    {
+      "id": 1,
+      "fullName": "Felipe Chinchilla",
+      "age": 28,
+      "occupation": "Programmer",
+      "nickname": "afbayonac",
+      "gender": "Male",
+      "picture": "https://randomuser.me/api/portraits/lego/1.jpg"
+    },
+    {
+      "id": 2,
+      "fullName": "Christopher Nicholas Sarantakos",
+      "age": 54,
+      "occupation": "illusionist",
+      "nickname": "Criss Angel",
+      "gender": "Male",
+      "picture": "https://randomuser.me/api/portraits/lego/2.jpg"
+    },
+    {
+      "id": 3,
+      "fullName": "Bob Johnson",
+      "age": 64,
+      "occupation": "Doctor",
+      "nickname": "Bobbyas",
+      "gender": "Male",
+      "picture": "https://randomuser.me/api/portraits/lego/3.jpg"
+    },
+    {
+      "id": 4,
+      "fullName": "Don Quixote",
+      "age": 70,
+      "occupation": "knight",
+      "nickname": "Quixote",
+      "gender": "Male",
+      "picture": "https://randomuser.me/api/portraits/lego/4.jpg"
+    },
+    {
+      "id": 5,
+      "fullName": "Elvis Aaron Presley",
+      "age": 110,
+      "occupation": "Singer",
+      "nickname": "Elvis",
+      "gender": "Male",
+      "picture": "https://randomuser.me/api/portraits/lego/5.jpg"
+    },
+    {
+      "id": 6,
+      "fullName": "Jose Villa Perez",
+      "age": 25,
+      "occupation": "Mariachi",
+      "nickname": "Jose Villa",
+      "gender": "Male",
+      "picture": "https://randomuser.me/api/portraits/lego/6.jpg"
+    },
+    {
+      "id": 7,
+      "fullName": "Michael Brown",
+      "age": 38,
+      "occupation": "Construction Worker",
+      "nickname": "Mike",
+      "gender": "Male",
+      "picture": "https://randomuser.me/api/portraits/lego/7.jpg"
+    },
+    {
+      "id": 8,
+      "fullName": "Gordon James Ramsay",
+      "age": 56,
+      "occupation": "Chef",
+      "nickname": "Gordon",
+      "gender": "Male",
+      "picture": "https://randomuser.me/api/portraits/lego/8.jpg"
+    },
+    {
+      "id": 9,
+      "fullName": "Isabela Rodriges",
+      "age": 22,
+      "occupation": "Accountant",
+      "nickname": "isab",
+      "gender": "Female",
+      "picture": "https://randomuser.me/api/portraits/lego/9.jpg"
+    },
+    {
+      "id": 10,
+      "fullName": "Andres Johnson",
+      "age": 79,
+      "occupation": "Bus Driver",
+      "nickname": "hero",
+      "gender": "Male",
+      "picture": "https://randomuser.me/api/portraits/lego/1.jpg"
+    }
+  ],
+  "tasks": [
+    {
+      "id": 1,
+      "title": "Upload Vercel",
+      "description": "Change server json for a db json local to upload a vercel",
+      "completed": true,
+      "startDate": "2022-12-09",
+      "endDate": "2022-12-10",
+      "personId": 1
+    },
+    {
+      "id": 2,
+      "title": "End magic act",
+      "description": "Recovering the participant's body from the day of the unknown dimension explosion",
+      "completed": false,
+      "startDate": "2022-12-04",
+      "endDate": "2022-12-22",
+      "personId": 2
+    },
+    {
+      "id": 3,
+      "title": "Retrieve my tweezers",
+      "description": "Retrieve my tweezers in the next operation, they were left inside the patient from the explosion.",
+      "completed": false,
+      "startDate": "2022-12-04",
+      "endDate": null,
+      "personId": 3
+    },
+    {
+      "id": 4,
+      "title": "Search for my spear",
+      "description": "I left it stuck in the giant",
+      "completed": false,
+      "startDate": "2022-12-01",
+      "endDate": "2022-12-30",
+      "personId": 4
+    },
+    {
+      "id": 5,
+      "title": "Task 5",
+      "description": "This is the fifth task on the list.",
+      "completed": false,
+      "startDate": "2022-12-30",
+      "endDate": null,
+      "personId": 5
+    },
+    {
+      "id": 6,
+      "title": "Singing lessons",
+      "description": "resume singing lessons, I don't know, if drugs or explotion left my throat broken",
+      "completed": false,
+      "startDate": "2022-12-16",
+      "endDate": "",
+      "personId": 6
+    },
+    {
+      "id": 7,
+      "title": "Hiding the concrete tests",
+      "description": "The prosecution is looking for structural faults, cheap concrete can land me in jail.",
+      "completed": true,
+      "startDate": "2022-12-09",
+      "endDate": "2022-12-29",
+      "personId": 7
+    },
+    {
+      "id": 8,
+      "title": "Cry",
+      "description": "crying over spilt milk, in the exploitation",
+      "completed": false,
+      "startDate": "2022-12-08",
+      "endDate": "2022-12-22",
+      "personId": 8
+    },
+    {
+      "id": 9,
+      "title": "New car",
+      "description": "I need money for a new car, only for this time",
+      "completed": false,
+      "startDate": "2022-12-02",
+      "endDate": "2022-12-01",
+      "personId": 9
+    },
+    {
+      "id": 10,
+      "title": "Task 10",
+      "description": "This is the tenth task on the list.",
+      "completed": true,
+      "startDate": "2022-12-04",
+      "endDate": null
+    },
+    {
+      "id": 11,
+      "title": "Remove console logs",
+      "description": "Remove all console logs",
+      "completed": false,
+      "startDate": "2022-12-09",
+      "endDate": null,
+      "personId": 1
+    },
+    {
+      "id": 12,
+      "title": "Cut body",
+      "description": "Cut the other body for the next act.",
+      "completed": false,
+      "startDate": "2022-12-22",
+      "endDate": "",
+      "personId": 2
+    },
+    {
+      "id": 13,
+      "title": "Insulin replacement",
+      "description": "asing to a pacient",
+      "completed": false,
+      "startDate": "2022-12-07",
+      "endDate": "2022-12-21",
+      "personId": 3
+    },
+    {
+      "id": 14,
+      "title": "Take my pills",
+      "description": "for colds ",
+      "completed": true,
+      "startDate": "2022-12-01",
+      "endDate": "2022-12-15",
+      "personId": 4
+    },
+    {
+      "id": 15,
+      "title": "Task 15 22222222222222222",
+      "description": "This is the fifteenth task on the list.",
+      "completed": false,
+      "startDate": "2022-12-01",
+      "endDate": "2022-12-15",
+      "personId": 5
+    },
+    {
+      "id": 16,
+      "title": "Search my hat2",
+      "description": "Search in place of explotion and the apartment my wife's best friend.. ",
+      "completed": true,
+      "startDate": "2022-12-08",
+      "endDate": "2022-12-08",
+      "personId": 6
+    },
+    {
+      "id": 17,
+      "title": "Move the money",
+      "description": "Move money to the Cayman Islands",
+      "completed": false,
+      "startDate": "2022-12-15",
+      "endDate": "",
+      "personId": 7
+    },
+    {
+      "id": 18,
+      "title": "Insult my assistants",
+      "description": "for be happy",
+      "completed": false,
+      "startDate": "2022-12-04",
+      "endDate": "",
+      "personId": 8
+    },
+    {
+      "id": 19,
+      "title": "Ajust balance",
+      "description": "after of explotion the directives are checking the acounts, my car is in danger..",
+      "completed": true,
+      "startDate": "2022-12-08",
+      "endDate": "2022-12-01",
+      "personId": 9
+    },
+    {
+      "id": 20,
+      "title": "Change brakes",
+      "description": "Cambiar de frenos, Sera que soy capaz de hacer una ruta sin frenos?",
+      "completed": false,
+      "startDate": "2022-12-14",
+      "endDate": "",
+      "personId": 10
+    },
+    {
+      "title": "Examen",
+      "completed": true,
+      "startDate": "2023-01-11",
+      "endDate": "2023-03-02",
+      "description": "Urgent exam",
+      "personId": 3,
+      "id": 21
+    },
+    {
+      "title": "New Task",
+      "completed": false,
+      "startDate": "2022-12-15",
+      "endDate": "",
+      "description": "new task",
+      "personId": 1,
+      "id": 22
+    }
+  ]
+}
