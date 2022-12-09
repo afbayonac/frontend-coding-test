@@ -41,5 +41,57 @@ button:hover {
     background-color: #2222221a;
 }
 
+input[type="text"], 
+input[type="number"], 
+input[type="date"],
+input[type="checkbox"],
+textarea,
+select {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: inherit;
+  box-sizing: border-box;
+  padding: 4px 6px;
+  max-width: 100%;
+}
+
+input[type="date"] {
+  max-width: 120px;
+}
+
+input[type="checkbox"]{
+  outline: none;
+  width: 16px;
+}
+
+input[data-state="error"],
+select[data-state="error"],
+textarea[data-state="error"] {
+  border: 1px solid var(--primary-color);
+}
+
+input[data-state="server-error"],
+select[data-state="server-error"],
+textarea[data-state="server-error"] {
+  border: 1px solid var(--primary-color);
+}
+
+input[data-state="valid"],
+select[data-state="valid"],
+textarea[data-state="valid"],
+input[data-state="loading"],
+select[data-state="loading"],
+textarea[data-state="loading"] {
+  border: 1px solid var(--secondary-color);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+}
+
+
 
 

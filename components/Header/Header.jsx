@@ -17,6 +17,12 @@ const Header = ({ children }) => {
           <li>
             <Link href='/'>Home</Link>
           </li>
+          <li>
+            <Link href='/profile/new'>New Profile</Link>
+          </li>
+          <li>
+            <Link href='/tasks/new'>New task</Link>
+          </li>
         </ul>
       </nav>
     </header>

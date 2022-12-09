@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { putAtribute } from '../../utils/putAttribute'
+import { isFunction } from '../../utils/utils'
 import styles from './Input.module.css'
 
 // TODO arrow select
@@ -45,6 +46,12 @@ const Input = ({ id, entity, name, initValue, label, isValid, sanitizer, as = 'i
         : {}
       )
     })
+
+    isFunction(callback) && callback(v, v === state.value
+      ? 'idle'
+      : isValid(v)
+        ? 'valid'
+        : 'error')
   }
 
   useEffect(() => {
@@ -70,6 +77,7 @@ const Input = ({ id, entity, name, initValue, label, isValid, sanitizer, as = 'i
 
   useEffect(() => {
     if (state['data-state'] !== 'valid') return
+    if (!id) return
 
     setTimer(setTimeout(async () => {
       const saved = await putAtribute(entity, id, state.value, name)
@@ -85,15 +93,20 @@ const Input = ({ id, entity, name, initValue, label, isValid, sanitizer, as = 'i
         'data-state': saved ? 'idle' : 'server-error'
       })
 
-      if (saved && callback) {
-        callback(state.value)
+      if (saved && isFunction(callback)) {
+        callback(state.value, saved ? 'idle' : 'server-error')
       }
     }, 1000))
+
+    setState({
+      ...state,
+      'data-state': 'loading'
+    })
   }, [state, entity, id, name, callback, type])
 
   return (
     <div className={styles.input}>
-      <label>{label} <span className={state['data-state'] === 'valid' ? styles.active : ''}>...saving</span></label>
+      <label>{label} <span className={state['data-state'] === 'loading' ? styles.active : ''}>...saving</span></label>
       <CustomTag
         {...state}
         onChange={(e) => changeState(type === 'checkbox' ? e.target.checked : e.target.value)}

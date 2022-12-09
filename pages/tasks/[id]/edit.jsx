@@ -34,7 +34,7 @@ function Edit ({ task }) {
       <h1 className={styles.title}> Edit task <span>{task.id}</span></h1>
       <div className={styles.edit}>
         <Input
-          label='Title'
+          label='Title *'
           initValue={title}
           type='text'
           entity='tasks'
@@ -45,7 +45,7 @@ function Edit ({ task }) {
           sanitizer={v => String(v).replace(/[^A-Za-z0-9 ]/mg, '').replace('  ', ' ')}
         />
         <Input
-          label='Description'
+          label='Description *'
           initValue={description}
           as='textarea'
           entity='tasks'
@@ -67,7 +67,7 @@ function Edit ({ task }) {
           sanitizer={v => Boolean(v)}
         />
         <Input
-          label='Start Date'
+          label='Start Date *'
           initValue={startDate}
           type='date'
           entity='tasks'
