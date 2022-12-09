@@ -11,7 +11,6 @@ function Edit ({ task }) {
   const [_completed, setCompleted] = useState(completed)
 
   const handlerEndDate = (value) => {
-    console.log(_completed, value)
     if (
       _completed === false &&
       isEndDate(value) &&

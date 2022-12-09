@@ -5,9 +5,6 @@ import { getPeopleById } from '../../../services/people'
 import style from './edit.module.css'
 
 function Edit ({ profile }) {
-  let count = 0
-  count += 1
-  console.log(count)
   const { id, age, fullName, occupation, nickname, gender, picture } = profile
   return (
     <Layout>
