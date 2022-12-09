@@ -1,0 +1,94 @@
+.input {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  text-align: left;
+  gap: 2;
+}
+
+.input > label {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.input > label > span {
+  display: none;
+  animation-name: parpadeo;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.input > label > span.active {
+  display: inline;
+  color: var(--secondary-color);
+  animation-name: parpadeo;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+
+.input > sub {
+  color: var(--primary-color);
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 200;
+  min-height: 16px;
+}
+
+.input > input[type="text"], 
+.input > input[type="number"], 
+.input > input[type="date"],
+.input > input[type="checkbox"],
+.input > textarea,
+.input > select {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: inherit;
+  box-sizing: border-box;
+  padding: 4px 6px;
+  max-width: 100%;
+}
+
+.input > input[type="date"] {
+  max-width: 120px;
+}
+
+.input > input[type="checkbox"]{
+  outline: none;
+  width: 16px;
+}
+
+.input > input[data-state="error"],
+.input > select[data-state="error"],
+.input > textarea[data-state="error"] {
+  border: 1px solid var(--primary-color);
+}
+
+.input > input[data-state="server-error"],
+.input > select[data-state="server-error"],
+.input > textarea[data-state="server-error"] {
+  border: 1px solid var(--primary-color);
+}
+
+.input > input[data-state="valid"],
+.input > select[data-state="valid"],
+.input > textarea[data-state="valid"] {
+  border: 1px solid var(--secondary-color);
+}
+
+.input > input:focus,
+.input > select:focus,
+.input > textarea:focus {
+  outline: none;
+}
+
+
+@keyframes parpadeo {  
+  0% { opacity: 1.0; }
+   50% { opacity: 0.0; }
+  100% { opacity: 1.0; }
+}
