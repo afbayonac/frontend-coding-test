@@ -32,8 +32,6 @@ const post = async (entity, body) => {
 
   const post = { ...body, id }
 
-  fs.writeFile('./db.json', JSON.stringify())
-
   await write({
     ...db,
     [entity]: [
@@ -49,8 +47,6 @@ const put = async (entity, id, body) => {
   const db = await read()
 
   const put = { ...body, id }
-
-  fs.writeFile('./db.json', JSON.stringify())
 
   console.log('save', put)
   await write({
