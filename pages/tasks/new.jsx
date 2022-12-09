@@ -6,7 +6,7 @@ import Layout from '../../components/Layout/Layout'
 import { postEntiy } from '../../utils/postEntity'
 import styles from './new.module.css'
 
-function Edit ({ profiles }) {
+function New ({ profiles }) {
   const router = useRouter()
   const [title, setTitle] = useState({
     value: '',
@@ -185,4 +185,4 @@ export async function getServerSideProps () {
   }
 }
 
-export default Edit
+export default New
