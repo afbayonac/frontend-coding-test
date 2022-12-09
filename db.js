@@ -6,7 +6,7 @@ const read = async () => {
 }
 
 const write = async (db) => {
-  return await fs.writeFile('./db.json', JSON.stringify(db))
+  return fs.writeFile('./db.json', JSON.stringify(db))
 }
 
 const getAll = async (entity) => {
@@ -52,6 +52,7 @@ const put = async (entity, id, body) => {
 
   fs.writeFile('./db.json', JSON.stringify())
 
+  console.log('save', put)
   await write({
     ...db,
     [entity]: db[entity].map(e => String(e.id) === id ? put : e)
