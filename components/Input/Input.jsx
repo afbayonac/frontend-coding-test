@@ -4,13 +4,17 @@ import styles from './Input.module.css'
 
 // TODO arrow select
 
-const Input = ({ id, entity, name, initValue, label, isValid, sanitizer, as = 'input', type, children, error, ...props }) => {
+const Input = ({ id, entity, name, initValue, label, isValid, sanitizer, as = 'input', type, children, error, callback, ...props }) => {
   const [timer, setTimer] = useState(null)
   const CustomTag = as
   const [state, setState] = useState({
     ...props,
     type,
     value: initValue,
+    ...(type === 'checkbox'
+      ? { checked: initValue }
+      : {}
+    ),
     'data-state': 'idle',
     'data-base': initValue
   })
@@ -31,7 +35,11 @@ const Input = ({ id, entity, name, initValue, label, isValid, sanitizer, as = 'i
         : isValid(v)
           ? 'valid'
           : 'error',
-      value: v
+      value: v,
+      ...(type === 'checkbox'
+        ? { checked: v }
+        : {}
+      )
     })
   }
 
@@ -40,25 +48,36 @@ const Input = ({ id, entity, name, initValue, label, isValid, sanitizer, as = 'i
 
     setTimer(setTimeout(async () => {
       const saved = await putAtribute(entity, id, state.value, name)
+
       setState({
         ...state,
+        value: saved ? state.value : state['data-base'],
+        ...(type === 'checkbox'
+          ? { checked: saved ? state.value : state['data-base'] }
+          : {}
+        ),
         'data-base': saved ? state.value : state['data-base'],
         'data-state': saved ? 'idle' : 'server-error'
       })
+
+      if (saved && callback) {
+        callback(state.value)
+      }
     }, 1000))
-  }, [state, setState, entity, id, name])
+  }, [state, entity, id, name, callback, type])
 
   return (
     <div className={styles.input}>
       <label>{label} <span className={state['data-state'] === 'valid' ? styles.active : ''}>...saving</span></label>
       <CustomTag
-        {...state} onChange={(e) => changeState(type === 'checkbox' ? e.target.checked : e.target.value)}
+        {...state}
+        onChange={(e) => changeState(type === 'checkbox' ? e.target.checked : e.target.value)}
       >
         {children}
       </CustomTag>
       <sub>
         {state['data-state'] === 'error' && error}
-        {state['data-state'] === 'server-error' && 'server-error'}
+        {state['data-state'] === 'server-error' && 'Server Error'}
       </sub>
     </div>
   )

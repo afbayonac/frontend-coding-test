@@ -42,7 +42,7 @@ const CardTask = ({ id, title, description, endDate, startDate, completed }) => 
     <div className={styles.card_task} data-completed={check.value}>
       <header>
         <span>{title}</span>
-        <button onClick={handleMark}>{check.value ? 'Mark as completed' : 'Mark as not completed'}</button>
+        <button onClick={handleMark}>{check.value ? 'Mark as not completed' : 'Mark as completed'}</button>
       </header>
       <span>{description}</span>
       <footer><span>{startDate}</span><span>{endDate}</span></footer>

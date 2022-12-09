@@ -1,10 +1,12 @@
 import Head from 'next/head'
 import Input from '../../../components/Input/Input'
 import Layout from '../../../components/Layout/Layout'
+import { isBeforeToday } from '../../../utils/utils'
 import styles from './edit.module.css'
 
 function Edit ({ task }) {
-  const { id, title, description, completed, startDate, endDate } = task
+  const { id, title, description, startDate, endDate, completed } = task
+
   return (
     <Layout>
       <Head>
@@ -75,6 +77,23 @@ export async function getServerSideProps ({ params }) {
 
   const responseTasks = await fetch(`http://localhost:3001/tasks/${id}`)
   const task = await responseTasks.json()
+
+  if (
+    task.completed === false &&
+    task.endDate !== null &&
+    task.endDate !== undefined &&
+    isBeforeToday(new Date(task.endDate))
+  ) {
+    await fetch(`http://localhost:3001/tasks/${id}`, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ ...task, completed: true })
+    })
+
+    task.completed = true
+  }
 
   console.log(task)
 

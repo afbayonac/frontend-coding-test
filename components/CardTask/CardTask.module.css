@@ -34,7 +34,7 @@
 }
 
 .card_task[data-completed="false"] > header > span {
-  color: var(--secondary-color);
+  color: var(--primary-color);
   width: 40%;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -42,7 +42,7 @@
 }
 
 .card_task[data-completed="true"] > header > span {
-  color: var(--primary-color);
+  color: var(--secondary-color);
 }
 
 

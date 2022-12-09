@@ -10,7 +10,7 @@ export default async function userHandler (req, res) {
   if (method === 'PUT') {
     const response = await fetch(`http://localhost:3001/people/${id}`)
     const profile = await response.json()
-    console.log(profile, body)
+
     const responsePUT = await fetch(`http://localhost:3001/people/${id}`, {
       method: 'PUT',
       headers: {
@@ -24,7 +24,6 @@ export default async function userHandler (req, res) {
 
     const profilePUT = await responsePUT.json()
 
-    console.log(profilePUT)
     res.status(200).json(profilePUT)
   } else {
     res.setHeader('Allow', ['PUT'])
