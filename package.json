@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "api": "json-server --watch db.json --port 3001",
-    "dev": "conc \"next dev\" \"npm run api\"",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
