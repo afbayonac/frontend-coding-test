@@ -72,7 +72,7 @@ function Edit ({ profile }) {
           name='age'
           id={id}
           isValid={v => !isNaN(v) && Number(v) > 18 && Number(v) < 120}
-          sanitizer={v => Number(v)}
+          sanitizer={v => v === '' ? v : Number(v)}
           min='18'
           max='120'
         />
