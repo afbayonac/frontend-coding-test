@@ -23,20 +23,3 @@
   padding: 16px 0;
 } 
 
-.sort > button {
-  display: inline-block;
-  outline: 0;
-  border: none;
-  cursor: pointer;
-  height: 32px;
-  padding: 0px 16px;
-  border-radius: 50px;
-  background-color: #2222220d;
-  color: #222;
-  font-size: 12px;
-  font-weight: 500;
-} 
-
-.sort > button:hover {
-    background-color: #2222221a;
-}

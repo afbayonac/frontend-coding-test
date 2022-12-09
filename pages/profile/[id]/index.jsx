@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
+import CardTask from '../../../components/CardTask/CardTask'
 import Layout from '../../../components/Layout/Layout'
 import styles from './index.module.css'
 
@@ -24,10 +25,14 @@ function Profile ({ profile, tasks = [] }) {
           <button>✎ Edit</button>
         </Link>
       </div>
-      <ol>
+      <ol className={styles.tasks}>
         {tasks.map(task => (
           <li key={task.id}>
-            <Link href={`/tasks/${task.id}/edit`}>{task.title}</Link>
+            <Link href={`/tasks/${task.id}/edit`}>
+              <a>
+                <CardTask {...task} />
+              </a>
+            </Link>
           </li>
         ))}
       </ol>

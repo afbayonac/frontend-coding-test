@@ -27,3 +27,23 @@
 .profile > h2 {
   font-size: 14px;
 }
+
+.tasks {
+  padding: 16px 0 ;
+  justify-content: center;
+  display: grid;
+  grid-template-columns: 320px;
+  gap: 16px;
+}
+
+@media screen and (min-width: 720px) {
+  .tasks {
+    grid-template-columns: 320px 320px;
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  .tasks {
+    grid-template-columns: 320px 320px 320px;
+  }
+}
