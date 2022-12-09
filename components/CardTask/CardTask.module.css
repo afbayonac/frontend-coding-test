@@ -18,18 +18,6 @@
   transform: scale(1.02);
 }
 
-
-.card_task > footer {
-  display: flex;
-  justify-content: space-between;
-  font-size: 12px;
-  line-height: 12px;
-}
-
-.card_task > footer > span[data-end="true"] {
-  color: var(--primary-color);
-}
-
 .card_task > header {
   display: flex;
   justify-content: space-between;
@@ -53,7 +41,6 @@
   color: var(--secondary-color);
 }
 
-
 .card_task > span {
   display: flex;
   justify-content: space-between;
@@ -62,6 +49,17 @@
   line-height: 24px;
   height: 288px;
   overflow: auto;
+}
+
+.card_task > footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  line-height: 12px;
+}
+
+.card_task > footer > span[data-end="true"] {
+  color: var(--primary-color);
 }
 
 
